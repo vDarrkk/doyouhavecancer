@@ -1,0 +1,42 @@
+{% extends 'cancerlayout.html' %}
+
+{% block body %}
+
+    <h3>You <u>may</u> have the following cancers based on correlation percentage:</h3>
+
+{% for cancer in result[0] %}
+
+    <div class ='death'>{{cancer[0]}} - {{cancer[1]}}%</div>
+
+{% endfor %}
+
+{% for cancer in result[1] %}
+
+    <div class ='severe'>{{cancer[0]}} - {{cancer[1]}}%</div>
+
+{% endfor %}
+
+{% for cancer in result[2] %}
+
+    <div class ='mid'>{{cancer[0]}} - {{cancer[1]}}%</div>
+
+{% endfor %}
+
+{% for cancer in result[3] %}
+
+    <div class ='mild'>{{cancer[0]}} - {{cancer[1]}}%</div>
+
+{% endfor %}
+
+{% for cancer in result[4] %}
+
+    <div class ='low'>{{cancer[0]}} - {{cancer[1]}}%</div>
+
+{% endfor %}
+
+    <p>Considering consulting a professional!</p>
+    <a href="/">Go Back</a>
+    <br>
+    <a href="/support">Support</a>
+
+{% endblock %}

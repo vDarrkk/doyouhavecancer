@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<form>
+    <div>
+
+    {% for symptom in symptoms %}
+
+        <div class="box">
+            <input type="checkbox" id="{{ symptom }}" name="{{ symptom }}" value="{{ symptom }}">
+            <label for="{{ symptom }}">{{ symptom }}</label>
+        </div>
+        <br>
+
+    {% endfor %}
+
+    <br>
+        <center><button formaction="/search" type="submit">Check For Cancer</button></center>
+        <br>
+    </div>
+    <br>
+</form>
+
+{% endblock %}
